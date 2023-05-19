@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct MinhaFeiraApp: App {
+    @StateObject var carrinhoGernciador = CarrinhoGerenciador()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(carrinhoGernciador )
         }
     }
 }
